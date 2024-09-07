@@ -7,7 +7,7 @@ const router = express.Router()
 const rateLimiter = require('express-rate-limit')
 
 const apiLimiter = rateLimiter({
-    windowMs:2*60*1000, // 15minutes
+    windowMs:15*60*1000, // 15minutes
     max:5,
     handler: function (req, res, next) {
         const now = Date.now();
